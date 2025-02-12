@@ -4,7 +4,8 @@
 //   This file is a header for EveAct class. User can add user-defined event
 // action in this class. So this class works at every event.
 //
-//                        - Feb 5th 2025, Hoyong Jeong (hoyong5419@korea.ac.kr)
+// - Author: Hoyong Jeong     (hoyong5419@korea.ac.kr)
+//           Antonino Cannavo (acannavo@bnl.gov      )
 ////////////////////////////////////////////////////////////////////////////////
 
 

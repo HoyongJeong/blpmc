@@ -4,7 +4,8 @@
 //   This file is a header for ActIni class. Every actions are initialized
 // through this class.
 //
-//                        - Feb 5th 2025, Hoyong Jeong (hoyong5419@korea.ac.kr)
+// - Author: Hoyong Jeong     (hoyong5419@korea.ac.kr)
+//           Antonino Cannavo (acannavo@bnl.gov      )
 ////////////////////////////////////////////////////////////////////////////////
 
 
