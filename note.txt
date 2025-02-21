@@ -1,0 +1,9 @@
+[Note at 2025. 2. 22.]
+- box to cylinder for scintillator
+- yellow is copper
+- See other taps in visio file to figure out polarimeter dimensions
+- chamber CAD file will be delivered -> Let's draw into the simulation
+- There is no colimator in front of the scint, but there is 1-mm mylar.
+- Do not care about 12-deg polarimeter
+- No worry about scintillation from the light guide
+- QGSP_BERT vs FTFP_BERT? QGSP for current...
