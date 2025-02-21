@@ -57,6 +57,7 @@ target_link_libraries(blpmc ${Geant4_LIBRARIES})
 set(BLPMC_SCRIPTS
 	init_vis.mac
 	vis.mac
+	config.conf
 )
 
 foreach(_script ${BLPMC_SCRIPTS})

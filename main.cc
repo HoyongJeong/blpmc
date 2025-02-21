@@ -12,10 +12,6 @@
 #include "G4RunManager.hh"
 #include "G4MTRunManager.hh"
 
-#include "DetCon.hh"
-#include "PriGenAct.hh"
-#include "ActIni.hh"
-
 #include "G4UIterminal.hh"
 #include "G4UItcsh.hh"
 #include "G4UImanager.hh"
@@ -24,6 +20,18 @@
 #include "Randomize.hh"
 
 #include "QGSP_BERT.hh"
+
+#include "DetCon.hh"
+#include "PriGenAct.hh"
+#include "ActIni.hh"
+#include "ConMan.hh"
+
+
+
+//////////////////////////////////////////////////
+//   Global variables
+//////////////////////////////////////////////////
+ConMan* CM;
 
 
 
@@ -42,11 +50,11 @@ int main (int argc, char** argv)
 	//------------------------------------------------
 	// Read options
 	//------------------------------------------------
-	int flag_b = 0, flag_g = 0, flag_h = 0, flag_m = 0;
-	const char* optDic = "bghm:"; // Option dictionary
+	int flag_b = 0, flag_g = 0, flag_h = 0, flag_m = 0, flag_c = 0;
+	const char* optDic = "bghm:c:"; // Option dictionary
 	int option;
 	char* macro;
-	double bp = 0.;
+	char* conf;
 	while ( (option = getopt(argc, argv, optDic)) != -1 ) // -1 means getopt() parses all options.
 	{
 		switch ( option )
@@ -64,11 +72,22 @@ int main (int argc, char** argv)
 				flag_m = 1;
 				macro = optarg;
 				break;
+			case 'c' :
+				flag_c = 1;
+				conf = optarg;
+				break;
 			case '?' :
 				flag_h = 1;
 				break;
 		}
 	}
+
+
+	//------------------------------------------------
+	// Configuration manager 
+	//------------------------------------------------
+	CM = new ConMan();
+	if ( flag_c ) CM -> Load(conf);
 
 
 	//------------------------------------------------
